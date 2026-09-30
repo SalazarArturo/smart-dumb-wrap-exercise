@@ -1,0 +1,13 @@
+<h2>vista wrapper 2</h2>
+
+@if(tasks) {
+    <app-dumb-component [tasks]="filteredTasks"></app-dumb-component>
+}@else {
+    <p>error al renderizar los componentes</p>
+}
+
+@if(filteredTasks.length === 0) {
+    <p>no hay mas tareas que mostrar</p>
+}@else {
+    <button (click)="loadMore()">siguiente</button>
+}

@@ -1,0 +1,16 @@
+@if (tasks) {
+    
+
+    <ul>
+        @for (task of tasks; track task.id) {
+        
+            <li [className]="scrollClass ? 'scrollClass' : ''">
+                {{task.id}}.-
+                {{task.name}}
+            </li>
+        }
+    </ul>
+    
+} @else {
+    <p>Error al renderizar las tareas</p>
+}

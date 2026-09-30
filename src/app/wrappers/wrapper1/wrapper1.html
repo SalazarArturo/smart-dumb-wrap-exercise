@@ -1,0 +1,7 @@
+@if (errorMessage) {
+    <h1>{{errorMessage}}</h1>
+}@else {
+    <h2>wrapper 1</h2>
+    <app-dumb-component [tasks]="filteredTasks" [scrollClass]="true"></app-dumb-component>
+    <div appInfiniteScroll (reachedEnd)="loadMore()"></div>
+}
